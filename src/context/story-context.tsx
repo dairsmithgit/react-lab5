@@ -11,10 +11,15 @@ const defaultValue: StoryContextValue = {
     addStory: () => 0,
 };
 
+const moreExamples: Story[] = [
+    {title: "title", words: ["word1", "word2"]},
+    {title: "title2", words: ["word3", "word4"]},
+]
+
 export const StoryContext = createContext(defaultValue);
 
 export function StoryContextProvider({ children }: { children: ReactNode }) {
-    const [ stories, setStories ] = useState<Story[]>(examples);
+    const [ stories, setStories ] = useState<Story[]>(moreExamples);
 
     function addStory(story: Story): number {
         setStories([...stories, story]);
