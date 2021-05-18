@@ -14,7 +14,7 @@ const defaultValue: StoryContextValue = {
 export const StoryContext = createContext(defaultValue);
 
 export function StoryContextProvider({ children }: { children: ReactNode }) {
-    const [ stories, setStories ] = useState<Story[]>([]);
+    const [ stories, setStories ] = useState<Story[]>(examples);
 
     function addStory(story: Story): number {
         setStories([...stories, story]);
