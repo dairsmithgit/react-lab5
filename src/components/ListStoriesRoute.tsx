@@ -9,7 +9,7 @@ export function ListStoriesRoute() {
         <div className="StoriesRoute">
             {stories.map((story, i) => (
                 <li key={i}>
-                    <Link to={`/stories/${i}`}>{story.title}</Link>{" "}
+                    <Link to={`/stories/${i}`}>{story.words[0]}{" "}by{" "}{story.title}</Link>{" "}
                 </li>
             ))}
         </div>

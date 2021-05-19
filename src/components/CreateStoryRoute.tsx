@@ -9,19 +9,23 @@ export function CreateStoryRoute() {
     const { addStory } = useContext(StoryContext);
     const history = useHistory();
 
-    const [author, setAuthor] = useState("");
   const [words, setWords] = useState([]);
+
+  const [title, setTitle] = useState("");
+  const [word1, setWord1] = useState("");
+  const [word2, setWord2] = useState("");
+  const [word3, setWord3] = useState("");
+  const [word4, setWord4] = useState("");
 
   function handleSubmit(e: FormEvent) {
       e.preventDefault();
 
       const story: Story = {
           title: title,
-          words: words[]
+          words: [word1, word2, word3, word4]
       };
 
       addStory(story);
-      setAuthor("");
       setWords([]);
 
       history.push('/');
@@ -31,29 +35,29 @@ export function CreateStoryRoute() {
       <form className="StoryForm" onSubmit={handleSubmit}>
           <div>
               <label>Your Name:{" "}
-                  <input type="text" onChange={(e) => setAuthor(e.target.value)}/>
+                  <input type="text" onChange={(e) => setTitle(e.target.value)}/>
               </label>
           </div>
           <div>
               <p>Words</p>
               <div>
                   <label>person:{" "}
-                  <input type="text" onChange={(e) => setWords([...words, word])}/>
+                  <input type="text" onChange={(e) => setWord1(e.target.value)}/>
                   </label>
               </div>
               <div>
                   <label>place:{" "}
-                  <input type="text" onChange={(e) => setWords([...words, word])}/>
+                  <input type="text" onChange={(e) => setWord2(e.target.value)}/>
                   </label>
               </div>
               <div>
                   <label>object:{" "}
-                  <input type="text" onChange={(e) => setWords([...words, word])}/>
+                  <input type="text" onChange={(e) => setWord3(e.target.value)}/>
                   </label>
               </div>
               <div>
                   <label>object:{" "}
-                  <input type="text" onChange={(e) => setWords([...words, word])}/>
+                  <input type="text" onChange={(e) => setWord4(e.target.value)}/>
                   </label>
               </div>
           </div>

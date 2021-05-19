@@ -18,6 +18,7 @@ function App() {
               <ViewStoryRoute />
             </Route>
           </Switch>
+          <CreateStoryRoute />
           <ListStoriesRoute />
         </div>
       </StoryContextProvider>

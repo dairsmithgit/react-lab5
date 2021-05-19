@@ -12,8 +12,8 @@ const defaultValue: StoryContextValue = {
 };
 
 const moreExamples: Story[] = [
-    {title: "title", words: ["word1", "word2"]},
-    {title: "title2", words: ["word3", "word4"]},
+    {title: "Broski", words: ["Genghis Khan", "supermarket", "rubber duck", "broom"]},
+    {title: "The Architect", words: ["Lebron James", "secretary of state", "microphone", "pair of glasses"]},
 ]
 
 export const StoryContext = createContext(defaultValue);

@@ -9,7 +9,11 @@ function StoryViewer({story}: Props) {
     const { words, title } = story;
 
     return (
+        
         <p>
+            <p>
+            {words[0]} by {title}{" "}
+            </p>
             Last weekend, I saw
             <em>
                 <strong>{" "}{words[0]}{" "}</strong>
