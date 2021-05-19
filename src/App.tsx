@@ -20,8 +20,10 @@ function App() {
             <Route path="/create-story">
             <CreateStoryRoute />
             </Route>
+            <Route path="/stories">
+            <ListStoriesRoute />
+            </Route>
           </Switch>
-          <ListStoriesRoute />
         </div>
       </StoryContextProvider>
     </Router>
