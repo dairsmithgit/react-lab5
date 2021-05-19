@@ -24,6 +24,7 @@ export function ViewStoryRoute() {
                 {prevStoryIndex >= 0 && (
                     <Link to={`/stories/${prevStoryIndex}`}>Previous Story</Link>
                 )}
+                {" "}
                 {nextStoryIndex < stories.length && (
                     <Link to={`/stories/${nextStoryIndex}`}>Next Story</Link>
                 )}

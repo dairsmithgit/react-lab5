@@ -28,7 +28,7 @@ export function CreateStoryRoute() {
       addStory(story);
       setWords([]);
 
-      history.push('/');
+      history.push(`/stories/:{num}`);
   }
 
   return (

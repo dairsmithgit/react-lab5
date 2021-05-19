@@ -17,8 +17,10 @@ function App() {
             <Route path="/stories/:num">
               <ViewStoryRoute />
             </Route>
+            <Route path="/create-story">
+            <CreateStoryRoute />
+            </Route>
           </Switch>
-          <CreateStoryRoute />
           <ListStoriesRoute />
         </div>
       </StoryContextProvider>
